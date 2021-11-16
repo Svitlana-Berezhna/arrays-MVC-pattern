@@ -37,7 +37,7 @@ public class Controller {
 
         view.printMessage(view.COUNT + model.getCountOfArrayElementsEqualToValue(inputIntValueWithScanner(sc)));
 
-//        Посчитать количество элементов, равных нулю
+//        Count the number of elements equal to zero.
         view.printMessage(view.COUNT_EQUAL_ZERO + model.getCountOfArrayElementsEqualToValue(0));
 
         view.printMessage(view.SUM_MORE_ZERO + model.getCountOfArrayElementsMoreThanZero());

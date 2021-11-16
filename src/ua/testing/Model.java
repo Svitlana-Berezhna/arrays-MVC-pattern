@@ -57,8 +57,9 @@ public class Model {
         System.out.println(Arrays.toString(Array));
     }
 
-    //        Желательно уметь написать любую задачу из нижеприведенных на листке бумаги (в блокноте) без ошибок
-    //        Найти сумму элементов массива
+    //        It is advisable to be able to write any of the tasks below on a piece of paper (in a notebook)
+    //        without errors.
+    //        Find the sum of the elements of the array.
     public int getSumArrayElements() {
         int sum = 0;
         Random random = new Random();
@@ -68,7 +69,7 @@ public class Model {
         return sum;
     }
 
-    //        Найти максимальный элемент, значение и индекс
+    //        Find maximum element, value and index.
     public ArrayList<Integer> getMaxArrayElement() {
         int valueMax = Integer.MAX_VALUE + 1;
         int indexMax = 0;
@@ -84,7 +85,7 @@ public class Model {
         return max;
     }
 
-    //        Найти минимальный элемент, значение и индекс
+    //        Find minimum element, value and index.
     public ArrayList<Integer> getMinArrayElement() {
         int valueMin = Integer.MAX_VALUE;
         int indexMin = 0;
@@ -100,7 +101,7 @@ public class Model {
         return max;
     }
 
-    //        Найти среднее значение элементов массива
+    //        Find the average of the elements of the array.
     public float getAverageArrayElements() {
         int sum = 0;
         for (int i = 0; i < getLengthArray(); i++) {
@@ -112,7 +113,7 @@ public class Model {
         return 0;
     }
 
-    //        Посчитать количество элементов, равных заданному
+    //        Count the number of elements equal to the given one.
     public int getCountOfArrayElementsEqualToValue(int value) {
         int count = 0;
         for (int i = 0; i < getLengthArray(); i++) {
@@ -123,7 +124,7 @@ public class Model {
         return count;
     }
 
-    //        Посчитать количество элементов больше нуля
+    //        Count the number of elements greater than zero.
     public int getCountOfArrayElementsMoreThanZero() {
         int count = 0;
         for (int i = 0; i < getLengthArray(); i++) {
@@ -134,21 +135,21 @@ public class Model {
         return count;
     }
 
-    //        Помножить элементы массива на число
+    //        Multiply the elements of the array by number.
     public void multiplyArrayElementsByNumber(int value) {
         for (int i = 0; i < getLengthArray(); i++) {
             getNumberArray()[i] *= value;
         }
     }
 
-    //        Прибавить к элементам массива их индекс
+    //        Add index to the elements of the array.
     public void addIndexToArrayElements() {
         for (int i = 0; i < getLengthArray(); i++) {
             getNumberArray()[i] += i;
         }
     }
 
-    //        Обнулить четные по значению элементы массива
+    //        Set to zero even by value elements of the array.
     public void setZeroToEvenInValueArrayElements() {
         for (int i = 0; i < getLengthArray(); i++) {
             if (getNumberArray()[i] % 2 == 0) {
@@ -157,7 +158,7 @@ public class Model {
         }
     }
 
-    //        Обнулить элементы с нечетным индексом
+    //        Set to zero elements with odd index.
     public void setZeroToOddIndexArrayElements() {
         for (int i = 0; i < getLengthArray(); i++) {
             if (i % 2 != 0) {
@@ -166,7 +167,7 @@ public class Model {
         }
     }
 
-    //        Найти первый положительный элемент
+    //        Find the first positive element.
     public int getFirstPositiveArrayElement() {
         int elem = -1;
         for (int i = 0; i < getLengthArray(); i++) {
@@ -178,7 +179,7 @@ public class Model {
         return elem;
     }
 
-    //        Найти последний отрицательный элемент
+    //        Find the last negative element.
     public int getLastNegativeArrayElement() {
         int elem = 1;
         for (int i = getLengthArray() - 1; i >= 0; i--) {
@@ -190,7 +191,7 @@ public class Model {
         return elem;
     }
 
-    //        Найти индексы вхождения элемента в массив
+    //        Find the indices of occurrence of the element in the array.
     public ArrayList<Integer> getIndexesOfOccurrenceOfElementInArray(int value) {
         ArrayList<Integer> indexes = new ArrayList<Integer>();
         for (int i = 0; i < getLengthArray(); i++) {
@@ -201,7 +202,7 @@ public class Model {
         return indexes;
     }
 
-    //        Проверить массив на упорядоченность элементов по возрастанию
+    //        Check the array for ascending order of elements.
     public boolean checkArrayForSortAscOrder(int[] Array) {
         for (int i = 0; i < Array.length - 1; i++) {
             if (Array[i] > Array[i + 1]) {
@@ -211,7 +212,7 @@ public class Model {
         return true;
     }
 
-    //        Проверить массив на упорядоченность элементов по убыванию
+    //        Check the array for descending ordering of elements.
     public boolean checkArrayForSortDescOrder() {
         for (int i = 0; i < getLengthArray() - 1; i++) {
             if (getNumberArray()[i] < getNumberArray()[i + 1]) {
@@ -221,7 +222,7 @@ public class Model {
         return true;
     }
 
-    //        Циклический сдвиг элементов массива на k-позиций вправо
+    //        Cyclic shift of array elements by k-positions to the right.
     public void cyclicShiftOfArrayElementsToTheRight(int countPos) {
         for (int i = 0; i < countPos; i++) {
             int temp = getNumberArray()[getLengthArray() - 1];
@@ -232,7 +233,7 @@ public class Model {
         }
     }
 
-    //        Вывести элементы, значения которых равны значениям других элементов
+    //        Display elements whose values are equal to the values of other elements.
     public ArrayList<Integer> getDuplicateArrayElements() {
         ArrayList<Integer> duplicates = new ArrayList<Integer>();
         for (int i = 0; i < getLengthArray() - 1; i++) {
@@ -245,7 +246,7 @@ public class Model {
         return duplicates;
     }
 
-    //        Найти количество элементов, больших среднего значения
+    //        Find the number of elements greater than the average.
     public int getCountOfArrayElementsMoreThanAverage() {
         int count = 0;
         float average = getAverageArrayElements();
@@ -257,7 +258,7 @@ public class Model {
         return count;
     }
 
-    //        Вывести элементы, значения которых не равны значениям других элементов
+    //        Display elements whose values are not equal to the values of other elements.
     public ArrayList<Integer> getUniqueArrayElements() {
         ArrayList<Integer> uniqueElements = new ArrayList<Integer>();
         boolean uniqueElement;
@@ -282,7 +283,7 @@ public class Model {
         return uniqueElements;
     }
 
-    //        Вывести элементы одного массива, которые не равны элементам второго массива
+    //        Output the elements of one array, which are not equal to the elements of the second array.
     public ArrayList<Integer> getUniqueArrayElementsComparedToTheSecondArray(int[] secondArray) {
         ArrayList<Integer> uniqueElements = new ArrayList<Integer>();
         boolean uniqueElement;
@@ -301,7 +302,7 @@ public class Model {
         return uniqueElements;
     }
 
-    //        Посчитать, сколько элементов в массиве с таким же значением, как и первый
+    //        Count how many elements in the array with the same value as the first one.
     public int getCountArrayElementsEqualToTheFirstElement() {
         int count = 0;
         for (int i = 1; i < getLengthArray(); i++) {
@@ -318,7 +319,7 @@ public class Model {
         }
     }
 
-    //        Из двух отсортированных массивов сделать третий отсортированный, не сортируя его
+    //        From two sorted arrays make the third sorted one without sorting it.
     public int[] getSortedArrayByConcatTwoSortedArrays(int[] secondArray) {
         int[] resultArray = new int[getLengthArray() + secondArray.length];
         SortArrayWithChecking(getNumberArray());
@@ -337,7 +338,7 @@ public class Model {
         return resultArray;
     }
 
-    //        Поменять первый положительный элемент с последним положительным, второй с предпоследним и т.д.
+    //        Change the first positive element with the last positive, the second with the penultimate, etc..
     public void SwapPositiveArrayElements() {
         int j = 0;
         int k = getLengthArray() - 1;
